@@ -1,9 +1,7 @@
 # Note Loading and Form Submission Diagram with SPA
 
-<!-- This diagram shows the sequence of events when loading the page `https://studies.cs.helsinki.fi/exampleapp/notes` and submitting a new note. -->
-
 ```mermaid
-    sequenceDiagram
+sequenceDiagram
     participant browser
     participant server
 
