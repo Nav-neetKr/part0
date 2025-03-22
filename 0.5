@@ -3,9 +3,9 @@
 <!-- This diagram shows the sequence of events when loading the page `https://studies.cs.helsinki.fi/exampleapp/notes` and submitting a new note. -->
 
 ```mermaid
-   sequenceDiagram
-   participant browser
-   participant server
+    sequenceDiagram
+    participant browser
+    participant server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -14,7 +14,7 @@
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser: the css file
+    server-->>browser: the CSS file
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
@@ -22,7 +22,7 @@
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: The browser starts executing JavaScript that fetches JSON from the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
@@ -31,12 +31,11 @@
 
     Note right of browser: The browser executes the callback function that renders the notes
 
+    browser->>browser: Renders the new note using JavaScript
+
     Note right of browser: User submits a new note via the form
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/notes (form data: "New note")
-    browser->>browser: Renders using JavaScript
     activate server
     server-->>browser: Response (e.g., 201 Created)
     deactivate server
-
-
 ```
