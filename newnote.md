@@ -1,6 +1,6 @@
 # Note Loading and Form Submission Diagram
 
-This diagram shows the sequence of events when loading the page `https://studies.cs.helsinki.fi/exampleapp/notes` and submitting a new note.
+<!-- This diagram shows the sequence of events when loading the page `https://studies.cs.helsinki.fi/exampleapp/notes` and submitting a new note. -->
 
 ```mermaid
     sequenceDiagram
