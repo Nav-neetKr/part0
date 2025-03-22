@@ -25,3 +25,23 @@ participant server
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+
+    browser->>server: Send the data from the form to the server.
+    activate server
+    server-->>browser: Page reload request sent by the server
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: the css file
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activate server
+    server-->>browser: the JavaScript file
+    deactivate server
