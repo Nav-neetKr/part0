@@ -31,11 +31,11 @@ sequenceDiagram
 
     Note right of browser: The browser executes the callback function that renders the notes
 
-    browser->>browser: Renders the new note using JavaScript
-
     Note right of browser: User submits a new note via the form
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/notes (form data: "New note")
     activate server
     server-->>browser: Response (e.g., 201 Created)
     deactivate server
-```
+
+    Note right of browser: JavaScript processes the response and updates the note list
+    browser->>browser: Renders the new note using JavaScript
